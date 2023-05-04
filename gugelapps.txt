@@ -1,0 +1,78 @@
+/// Request
+[GET] https//api.gugelapps.com/apps
+Accept: application/json
+
+/// Response
+Status Code: 200 (OK)
+Content-type: application/json
+
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Payaso Esponja Horror Horripilante Abuelita miedo",
+            "rate": "10000/10",
+            "publisher": "Shaheen Games"
+        },
+        {
+            "id": 2,
+            "name": "Gorila Volador",
+            "rate": "GOTY of the year"
+            "publisher": "Pinbit LLC"
+        },
+    ]
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[POST] https//api.gugelapps.com/apps
+Accept: application/json
+
+Body:
+{
+    "name": "Twerk Race 3D－juegos de correr",
+    "rate": "gud"
+    "publisher": "Freeplay Inc" 
+}
+
+/// Response
+Status Code: 201 (Created)
+Content-type: application/json
+
+{
+    "id": 3,
+    "name": "Twerk Race 3D－juegos de correr",
+    "rate": "gud"
+    "publisher": "Freeplay Inc" 
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[PUT] https//api.gugelapps.com/apps
+Accept: application/json
+
+Body:
+{
+    "id": 3,
+    "rate": "guuuud/10"
+}
+
+/// Response
+Status Code: 201 (Created)
+Content-type: application/json
+
+{
+    "id": 3,
+    "name": "Twerk Race 3D－juegos de correr",
+    "rate": "guuuud/10"
+    "publisher": "Freeplay Inc" 
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[DELETE] https//api.gugelapps.com/apps/2
+Accept: application/json
+
+/// Response
+Status Code: 200 (OK)
+Content-type: application/json
