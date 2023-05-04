@@ -1,0 +1,77 @@
+/// Request
+[GET] https//api.amenzon.com/products
+Accept: application/json
+
+/// Response
+Status Code: 200 (OK)
+Content-type: application/json
+
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Tennis Mike",
+            "img": "../img/Mike.jpg",
+            "price": 5500
+        },
+        {
+            "id": 2,
+            "name": "ifone Android S10 plus",
+            "img": "../img/ifone.jpg",
+            "price": 35000
+        },
+    ]
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[POST] https//api.amenzon.com/products
+Accept: application/json
+
+Body: 
+{
+    "name": "Sany Xpurrria",
+    "img": "../img/Purrrr.jpg",
+    "price": 10500
+}
+
+/// Response
+Status Code: 201 (Created)
+Content-type: application/json
+
+{
+    "id": 3,
+    "name": "Sany Xpurrria",
+    "img": "../img/Purr.jpg",
+    "price": 10500
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[PUT] https//api.amenzon.com/products/3
+Accept: application/json
+
+Body: 
+{
+    "name": "Sany Xpurria",
+}
+
+/// Response
+Status Code: 201 (Created)
+Content-type: application/json
+
+{
+    "id": 3,
+    "name": "Sany Xpurria",
+    "img": "../img/Purr.jpg",
+    "price": 10500
+}
+
+---------------------------------------------------------------------------------------------------
+/// Request
+[DELETE] https//api.amenzon.com/products/3
+Accept: application/json
+
+/// Response
+Status Code: 200 (OK)
+Content-type: application/json
